@@ -1,0 +1,25 @@
+CREATE OR REPLACE PACKAGE BODY CUST_SAL_PKG AS
+
+    PROCEDURE FIND_SAL(
+        C_ID CUSTOMERS.ID%TYPE
+    ) IS
+        C_SAL CUSTOMERS.SALARY%TYPE;
+    BEGIN
+        SELECT
+            SALARY INTO C_SAL
+        FROM
+            CUSTOMERS
+        WHERE
+            ID = C_ID;
+        DBMS_OUTPUT.PUT_LINE('Salary: '
+                             || C_SAL);
+    END FIND_SAL;
+END CUST_SAL_PKG;
+/
+
+DECLARE
+    CODE CUSTOMERS.ID%TYPE := &CC_ID;
+BEGIN
+    CUST_SAL_PKG.FIND_SAL(CODE);
+END;
+/

@@ -1,0 +1,5 @@
+DECLARE
+    MESSAGE VARCHAR2(30):= 'That''s tutorialspoint.com!';
+BEGIN
+    DBMS_OUTPUT.PUT_LINE(MESSAGE);
+END;

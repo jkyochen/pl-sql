@@ -1,0 +1,19 @@
+CREATE OR REPLACE FUNCTION TOTALCUSTOMERS RETURN NUMBER IS
+    TOTAL NUMBER(2) := 0;
+BEGIN
+    SELECT
+        COUNT(*) INTO TOTAL
+    FROM
+        CUSTOMERS;
+    RETURN TOTAL;
+END;
+/
+
+DECLARE
+    C NUMBER(2);
+BEGIN
+    C := TOTALCUSTOMERS();
+    DBMS_OUTPUT.PUT_LINE('Total no. of Customers: '
+                         || C);
+END;
+/
