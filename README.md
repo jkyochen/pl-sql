@@ -1,11 +1,13 @@
 
 ## Docs
 
-https://www.oracle.com/database/technologies/appdev/plsql.html
+[Oracle Database 23c Documentation English](https://docs.oracle.com/en/database/oracle/oracle-database/index.html)
+
+[Oracle Database 23c Free - Developer Release 日本語](https://docs.oracle.com/cd/F82042_01/development.html)
 
 https://www.tutorialspoint.com/plsql/
 
-## Run Oracle
+## Run Oracle In Docker
 
 ```sh
 # Version 23 https://hub.docker.com/r/gvenzl/oracle-free
